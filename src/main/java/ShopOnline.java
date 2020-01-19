@@ -11,7 +11,7 @@ public class ShopOnline {
             throw new IllegalArgumentException("Shoes cannot be null!");
         }
 
-        boolean wasPaid = paymentService.pay(clientBankAccount.getBalance(), shoes.getPrice());
+        boolean wasPaid = paymentService.pay(clientBankAccount.getClientId(), shoes.getPrice());
 
         if (wasPaid) {
             return "PAID";
